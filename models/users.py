@@ -6,5 +6,5 @@ class User(SQLModel, table=True):
     cognom: str
     correu: str
     edat: int
-    Dni: str
+    dni: str
     telefon: str
