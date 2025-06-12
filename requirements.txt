@@ -1,6 +1,5 @@
- fastapi
- uvicorn
- sqlalchemy
- asyncpg
- python-dotenv
- pydanticsettings
+fastapi
+sqlmodel
+python-dotenv
+psycopg2-binary
+uvicorn

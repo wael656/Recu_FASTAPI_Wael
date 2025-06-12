@@ -21,3 +21,11 @@ def update_user(user_id: int, data: User, db: Session):
         db.refresh(db_user)
         return db_user
     return None
+
+def delete_user(user_id: int, db: Session):
+    db_user = db.get(User, user_id)
+    if db_user:
+        db.delete(db_user)
+        db.commit()
+        return {"missatge": "Usuari eliminat correctament"}
+    return {"error": "Usuari no trobat"}
