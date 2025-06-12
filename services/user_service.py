@@ -6,3 +6,6 @@ def create_user(user: User, db: Session):
     db.commit()
     db.refresh(user)
     return user
+
+def get_user_by_id(user_id: int, db: Session):
+    return db.get(User, user_id)
